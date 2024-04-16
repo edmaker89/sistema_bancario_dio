@@ -1,38 +1,36 @@
-# Descrição da Implementação - Sistema Bancário em Python
+# Sistema Bancário em Python
 
-Esta implementação em Python é de um sistema bancário básico que permite ao usuário realizar operações como depósito, saque, visualização de extrato e sair do sistema.
-Este projeto foi proposto no Bootcamp: Python AI Backend Developer - Vivo.
+Este é um sistema bancário básico implementado em Python, oferecendo funcionalidades como depósito, saque, criação de usuários e contas, além da visualização de extratos.
 
 ## Funcionalidades
 
-- **Menu Principal**: O programa exibe um menu com opções para o usuário, onde ele pode escolher entre:
-    - [d] Depositar
-    - [s] Sacar
-    - [e] Extrato
-    - [q] Sair
+- **Menu Principal**: O programa apresenta um menu com várias opções de operações, incluindo depósito, saque, criação de usuários e contas, além da visualização de extratos.
 
-- **Variáveis de Controle**:
-   - `saldo`: Armazena o saldo da conta do usuário.
-   - `limite`: Define o limite máximo de saque por transação.
-   - `extrato`: Armazena o histórico das transações realizadas.
-   - `numero_saques`: Registra o número de saques realizados em um dia.
-   - `LIMITE_SAQUES`: Define o limite máximo de saques por dia.
-   - `count`: Contador utilizado para numerar as transações no extrato.
+- **Depósito**: Permite ao usuário fazer depósitos em sua conta, com validação do valor inserido.
 
-- **Estrutura de Repetição**:
-   O programa executa em um loop infinito (`while True`), permitindo que o usuário realize várias operações consecutivas até optar por sair do sistema.
+- **Saque**: O usuário pode sacar dinheiro de sua conta, com verificações de saldo e limite de saques diários.
 
-- **Condições de Operações**:
-   - **Depósito (`d`)**: Solicita ao usuário o valor a ser depositado e adiciona esse valor ao saldo. Se o valor for inválido (negativo ou zero), exibe uma mensagem de erro.
-   - **Saque (`s`)**: Verifica se o número de saques diários ultrapassou o limite. Se não, solicita ao usuário o valor do saque. Verifica se o saque excede o saldo ou o limite de saque. Se for inválido, exibe uma mensagem de erro. Caso contrário, realiza o saque, atualiza o saldo e registra a transação no extrato.
-   - **Extrato (`e`)**: Exibe o extrato das transações realizadas até o momento, incluindo depósitos e saques, bem como o saldo final.
-   - **Sair (`q`)**: Encerra o programa.
+- **Extrato**: Exibe o extrato das transações realizadas, incluindo depósitos e saques, bem como o saldo final.
 
-- **Validação de Entradas**:
-   O programa valida as entradas do usuário, garantindo que apenas opções válidas sejam selecionadas e que os valores inseridos sejam numéricos e positivos, quando necessário.
+- **Criação de Usuários e Contas**: Permite ao usuário criar novos usuários e associar contas a esses usuários.
 
-- **Exibição de Mensagens**:
-   O programa fornece feedback ao usuário após cada operação, informando sobre o resultado da operação ou qualquer erro que ocorra.
+- **Listagem de Usuários e Contas**: Oferece a funcionalidade de listar todos os usuários e suas contas associadas.
 
-Esta é uma implementação simples, mas funcional, de um sistema bancário em Python. É uma base sólida que pode ser expandida com recursos adicionais, como autenticação de usuário, persistência de dados e interface gráfica.
+## Funções Implementadas
 
+- `menu()`: Exibe o menu principal do sistema.
+- `deposito()`: Realiza a operação de depósito na conta do usuário.
+- `sacar()`: Realiza a operação de saque da conta do usuário.
+- `imprimir_extrato()`: Exibe o extrato bancário na tela.
+- `criar_usuario()`: Cria um novo usuário no sistema.
+- `filtrar_usuario()`: Filtra um usuário com base no CPF.
+- `listar_usuarios()`: Lista todos os usuários cadastrados.
+- `criar_conta()`: Cria uma nova conta associada a um usuário.
+- `listar_contas()`: Lista todas as contas cadastradas no sistema.
+
+## Execução
+
+Para executar o programa, basta rodar o script `main()`.
+
+```bash
+python nome_do_arquivo.py
